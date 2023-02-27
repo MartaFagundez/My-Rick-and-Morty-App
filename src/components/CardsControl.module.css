@@ -1,0 +1,45 @@
+.cardsControl {
+  margin: 40px auto 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonCyan {
+  background-color: var(--cyan);
+  padding: 7px 15px;
+  margin: 0px 5px;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--violet-dark);
+  border-radius: 7px;
+  border-color: transparent;
+}
+
+.buttonCyan:hover {
+  background-color: var(--green);
+  transform: scale(1.03);
+}
+
+input + .buttonCyan {
+  border-radius: 0 7px 7px 0;
+}
+
+input {
+  color: var(--violet-dark);
+  font-family: "Signika Negative", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 7px 10px;
+  margin: 0 -15px 0 7px;
+  border-radius: 7px 0 0 7px;
+  max-width: 70px;
+  outline: none;
+  border-color: transparent;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--cyan);
+}

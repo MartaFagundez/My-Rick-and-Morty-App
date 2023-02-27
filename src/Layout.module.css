@@ -1,0 +1,128 @@
+.main {
+  text-align: center;
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgb(103, 43, 143);
+  background: linear-gradient(
+    180deg,
+    rgba(103, 43, 143, 1) 24%,
+    rgba(253, 29, 29, 1) 80%,
+    rgba(255, 158, 23, 1) 100%
+  );
+  background-image: url("./imgs/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(46, 22, 65, 0.6);
+  backdrop-filter: blur(10px);
+  background-blend-mode: multiply;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  background: var(--violet-medium);
+  background: linear-gradient(
+    180deg,
+    var(--violet-medium) 2%,
+    var(--pink) 100%
+  );
+  -webkit-box-shadow: 3px 10px 14px -5px rgba(46, 22, 65, 0.54);
+  -moz-box-shadow: 3px 10px 14px -5px rgba(46, 22, 65, 0.54);
+  box-shadow: 3px 10px 14px -5px rgba(46, 22, 65, 0.54);
+}
+
+.nav {
+  padding: 2vh 4vw 1vh 4vw;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navLink {
+  padding: 5px 10px;
+  margin: 0px 7px;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+.navLink:hover {
+  color: var(--green);
+}
+
+.active {
+  color: var(--green);
+}
+
+.inactive {
+  color: white;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  max-width: 270px;
+  margin: -3vw auto -3vw auto;
+  transition: 500ms;
+}
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.title h1 {
+  font-family: "Londrina Solid", cursive;
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--green);
+  margin: 10px auto;
+}
+
+.title p {
+  font-family: "Signika Negative", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+.visible {
+  display: flex;
+}
+
+.invisible {
+  display: none;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
