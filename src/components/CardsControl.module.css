@@ -22,11 +22,11 @@
   transform: scale(1.03);
 }
 
-input + .buttonCyan {
+.cardsControl input + .buttonCyan {
   border-radius: 0 7px 7px 0;
 }
 
-input {
+.cardsControl input {
   color: var(--violet-dark);
   font-family: "Signika Negative", sans-serif;
   font-size: 16px;
@@ -39,7 +39,7 @@ input {
   border-color: transparent;
 }
 
-input:focus {
+.cardsControl input:focus {
   outline: none;
   border-color: var(--cyan);
 }

@@ -5,7 +5,7 @@ import "./index.css";
 import styles from "./Layout.module.css";
 
 
-export default function Layout() {
+export default function Layout(props) {
 
     const urlBase = "https://be-a-rym.up.railway.app/api";
     const apiKey = "f1eb8e685b6b.6e353b80c36825beb221";
@@ -71,10 +71,20 @@ export default function Layout() {
             <div className={styles.container}>
                 <section className={styles.header}>
                     <nav className={styles.nav}>
-                        <NavLink to="/app" className={({isActive}) => checkActive(isActive)} end>Home</NavLink>
-                        <NavLink to="/app/favorites" className={({isActive}) => checkActive(isActive)} >Favorites</NavLink>
-                        <NavLink to="/app/about" className={({isActive}) => checkActive(isActive)} >About</NavLink>
-                        <NavLink to="/" className={({isActive}) => checkActive(isActive)} >Logout</NavLink>
+                        <ul>
+                            <li>
+                                <NavLink to="/app" className={({isActive}) => checkActive(isActive)} end>Home</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/app/favorites" className={({isActive}) => checkActive(isActive)} >Favorites</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/app/about" className={({isActive}) => checkActive(isActive)} >About</NavLink>
+                            </li>
+                            <li onClick={props.logout}>
+                                <NavLink to="/" className={({isActive}) => checkActive(isActive) } >Logout</NavLink>
+                            </li>
+                        </ul>
                     </nav>
                     
                     <div className={styles.hero}>

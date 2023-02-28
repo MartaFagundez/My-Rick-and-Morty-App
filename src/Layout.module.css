@@ -53,6 +53,16 @@
   align-items: center;
 }
 
+.nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav li {
+  list-style: none;
+}
+
 .navLink {
   padding: 5px 10px;
   margin: 0px 7px;

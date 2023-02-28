@@ -1,0 +1,118 @@
+.formMain {
+  text-align: center;
+  font-family: "Signika Negative", sans-serif;
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgb(103, 43, 143);
+  background: linear-gradient(
+    180deg,
+    rgba(103, 43, 143, 1) 24%,
+    rgba(253, 29, 29, 1) 80%,
+    rgba(255, 158, 23, 1) 100%
+  );
+  background-image: url("../imgs/rymL.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.formContainer {
+  padding: 40px;
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer h1 {
+  font-family: "Londrina Solid", cursive;
+  font-size: 53px;
+  font-weight: 400;
+  color: var(--cyan);
+  margin: 15px auto 10px auto;
+  text-shadow: 4px 4px 0px var(--violet-light), 6px 4px 0px var(--pink);
+  transition: 400ms;
+}
+.formContainer h1:hover {
+  color: var(--green);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form input {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid var(--violet-light);
+  color: var(--violet-light);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 7px 10px;
+  margin: 15px;
+  max-width: 200px;
+  outline: none;
+}
+.form input:focus {
+  border-bottom: 3px solid var(--violet-light);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.formMain h3 {
+  color: var(--pink);
+  margin: 120px auto 50px auto;
+  align-self: flex-end;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.form button {
+  background-color: var(--cyan);
+  padding: 7px 40px;
+  margin: 40px auto;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--violet-medium);
+  border-radius: 7px;
+  border-color: transparent;
+}
+
+.form button:hover {
+  background-color: var(--green);
+  transform: scale(1.02);
+}
+
+.hidden {
+  display: none;
+}
+
+.link:link,
+.link:visited {
+  color: var(--cyan);
+}
+.link:hover,
+.link:active {
+  color: var(--green);
+}
+
+.warning {
+  border: solid red 1px;
+  border-radius: 0.2em;
+}
+
+.danger {
+  font-size: 12px;
+  color: rgb(227, 10, 90);
+}
