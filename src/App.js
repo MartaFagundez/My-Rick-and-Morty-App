@@ -6,13 +6,14 @@ import Cards from "./components/Cards";
 import Detail from "./components/Detail";
 import About from "./components/About";
 import Form from "./components/Form";
+import Favorites from './components/Favorites';
 
 
 export default function App() {
     const navigate = useNavigate();
     let [ access, setAccess ] = React.useState(false);
-    const username = "maria.perez@miemail.com";
-    const password = "1234";
+    const username = "maria@email.com";
+    const password = "123456";
 
     const login = (userData) => {
         if (userData.username === username && userData.password === password) {
@@ -39,7 +40,10 @@ export default function App() {
             <Route path='/app' element={<Layout logout={logout}/>} >
                 <Route index element={<Cards /> } />
                 <Route path=':charId' element={<Detail />} />
-                <Route path='favorites' element={<Cards />} />
+                <Route path='favorites' >
+                    <Route index element={<Favorites /> } />
+                    <Route path=':charId' element={<Detail />} />   
+                </Route>
                 <Route path='about' element={<About />} />
                 <Route path='*' element={<Navigate replace to="/" />} />
             </Route>

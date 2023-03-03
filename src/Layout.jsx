@@ -21,6 +21,10 @@ export default function Layout(props) {
                 setTitle("About Me");
                 setSubtitle("I am passionate about creating efficient, beautiful software that provides valuable solutions for people.");
                 break;
+            case "/app/favorites":
+                setTitle("Favorites");
+                setSubtitle("Your collection of cards with your favorite characters. Keep looking until you find them all!");
+                break;    
             default:
                 setTitle("Rick and Morty App");
                 setSubtitle("Create cards with a random character or enter a number from 1 to 826 and click the Search button.");

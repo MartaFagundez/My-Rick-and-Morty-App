@@ -1,5 +1,5 @@
 import React from 'react';
-import { useOutletContext, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import styles from "./Detail.module.css";
 
 export default function Detail(props) {

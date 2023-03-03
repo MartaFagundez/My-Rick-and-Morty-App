@@ -71,6 +71,10 @@
   transform: scale(1.2);
 }
 
+.isFav {
+  color: var(--green);
+}
+
 .closeIcon {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.5);
