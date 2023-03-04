@@ -87,11 +87,13 @@
   color: var(--violet-medium);
   border-radius: 7px;
   border-color: transparent;
+  transition: 500ms;
 }
 
 .form button:hover {
   background-color: var(--green);
-  transform: scale(1.02);
+  transform: scale(1.1);
+  box-shadow: 4px 4px 0px var(--violet-light), 7px 7px 0px var(--pink);
 }
 
 .hidden {

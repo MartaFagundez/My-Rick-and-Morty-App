@@ -15,9 +15,9 @@ export default function About() {
             </figure>
             
             <section className={ styles.info }>
-                <p>Linkedin: <span>miperfildelinkedin</span></p>
-                <p>Github: <span>miperfildelinkedin</span></p>
-                <p>Website: <span>miperfildelinkedin</span></p>
+                <p><a href="https://www.linkedin.com/in/martafagundezrodriguez/" target="_blank" rel="noreferrer" className={styles.link} >Linkedin</a></p>
+                <p><a href="https://github.com/MartaFagundez" target="_blank" rel="noreferrer" className={styles.link} >GitHub</a></p>
+                <p><a href="https://martafagundez.com/" target="_blank" rel="noreferrer" className={styles.link} >Website</a></p>
             </section>
         </div>
    </div>

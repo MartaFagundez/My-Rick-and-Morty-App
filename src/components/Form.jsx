@@ -51,7 +51,7 @@ export default function Form (props) {
         
             </div>
 
-            <h3>Made with ❤ by  <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className={styles.link} > Marta Fagúndez</a> </h3>
+            <h3>Made with ❤ by  <a href="https://www.linkedin.com/in/martafagundezrodriguez/" target="_blank" rel="noreferrer" className={styles.link} > Marta Fagúndez</a> </h3>
             
         </main>
     );
