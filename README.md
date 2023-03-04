@@ -18,3 +18,4 @@ Hasta el momento, he utilizado principalmente las siguientes tecnologías:
 
 Aquí puedes ver una demostración del estado actual del proyecto 😊:
 
+[![Watch the video](https://img.youtube.com/vi/RD4MX6ua66U/default.jpg)](https://www.youtube.com/watch?v=RD4MX6ua66U)
