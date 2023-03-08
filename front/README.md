@@ -8,13 +8,14 @@ El proyecto consiste en un juego donde se pueden generar cartas basadas en los p
 
 Hasta el momento, he utilizado principalmente las siguientes tecnologías:
 
-* HTML
-* CSS
 * JavaScript
 * React
 * Redux
+* CSS
+* HTML
 
 ## Demostración del proyecto
 
 Aquí puedes ver una demostración del estado actual del proyecto 😊:
 
+[![Watch the video](https://img.youtube.com/vi/RD4MX6ua66U/default.jpg)](https://www.youtube.com/watch?v=RD4MX6ua66U)
