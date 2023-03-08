@@ -8,11 +8,11 @@ El proyecto consiste en un juego donde se pueden generar cartas basadas en los p
 
 Hasta el momento, he utilizado principalmente las siguientes tecnologías:
 
-* HTML
-* CSS
 * JavaScript
 * React
 * Redux
+* CSS
+* HTML
 
 ## Demostración del proyecto
 
