@@ -9,5 +9,31 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row;
   margin: 20px auto 50px auto;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 16px;
+  color: var(--cyan);
+}
+
+.select {
+  margin: 40px 15px 10px 15px;
+}
+
+.select select {
+  padding: 7px 10px;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 16px;
+  color: var(--violet-medium);
+}
+
+.select label {
+  padding: 7px;
 }

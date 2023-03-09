@@ -26,28 +26,28 @@ const reducer = (state = initialState, action) => {
             if (action.payload === "All") {
                 return {
                     ...state,
-                    myFavorites: state.allCharacters
+                    myFavorites: [...state.allCharacters]
                 };
             }
             else {
                 return {
                     ...state,
-                    myFavorites: state.myFavorites.filter( char => char.gender === action.payload)
+                    myFavorites: state.allCharacters.filter( char => char.gender === action.payload)
                 };
             }
             
 
         case ORDER_CARDS: 
-            if (action.payload === "Ascendente") {
+            if (action.payload === "Ascending") {
                 return {
                     ...state,
-                    myFavorites: state.myFavorites.sort((a,b) => Number(a.id) > Number(b.id))
+                    myFavorites: state.myFavorites.sort((a,b) => a.name > b.name )
                 };
             }
-            else if (action.payload === "Descendente") {
+            else if (action.payload === "Descending") {
                 return {
                     ...state,
-                    myFavorites: state.myFavorites.sort((a,b) => Number(b.id) > Number(a.id))
+                    myFavorites: state.myFavorites.sort((a,b) => b.name > a.name)
                 };  
             } 
             else {

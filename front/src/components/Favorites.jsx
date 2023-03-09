@@ -12,38 +12,54 @@ export default function Favorites() {
    const myFavorites = useSelector((state) => state.myFavorites);
    const dispatch = useDispatch();
 
+   const [ filter, setFilter] = React.useState("All");
+   const [ order, setOrder ] = React.useState("Random");
+
+   React.useEffect(() => {
+      dispatch(filterCards(filter));
+      dispatch(orderCards(order))
+
+   }, [filter, order]);
+
    const handleFilter = (event) => {
-      dispatch(filterCards(event.target.value))
+      setFilter(event.target.value);
    }
 
    const handleOrder = (event) => {
-      dispatch(orderCards(event.target.value))
+      setOrder(event.target.value);
    }
 
    return (
       <div className={styles.container}>
          
-         <div>
-            <select name="order" id="order" onChange={handleOrder}>
-               <option value="Random">Random</option>
-               <option value="Ascendente">Ascendente</option>
-               <option value="Descendente">Descendente</option>
-            </select>
+         <div className={styles.controls}>
 
-            <select name="filter" id="filter" onChange={handleFilter}>
-               <option value="All">All</option>
-               <option value="Male">Male</option>
-               <option value="Female">Female</option>
-               <option value="Genderless">Genderless</option>
-               <option value="unknown">unknown</option>
-            </select>
+            <div className={styles.select}>
+               <label htmlFor="order">Order by Name</label>
+               <select name="order" id="order" onChange={handleOrder}>
+                  <option value="Random">Random</option>
+                  <option value="Ascending">Ascending</option>
+                  <option value="Descending">Descending</option>
+               </select>
+            </div>
+
+            <div className={styles.select}>
+               <label htmlFor="filter">Filter by Gender</label>
+               <select name="filter" id="filter" onChange={handleFilter}>
+                  <option value="All">All</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Genderless">Genderless</option>
+                  <option value="unknown">unknown</option>
+               </select>
+            </div>
          </div>
 
          <div className={styles.cards}>
             {
-               myFavorites.map((character, index) => 
+               myFavorites.map((character) => 
                   <Card 
-                  key={index} id={character.id} 
+                  key={character.id} id={character.id} 
                   name={character.name}
                   species={character.species}
                   gender={character.gender}

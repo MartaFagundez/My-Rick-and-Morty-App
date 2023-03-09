@@ -16,7 +16,6 @@ export default function Layout(props) {
     const [subtitle, setSubtitle] = React.useState("Create cards with a random character or enter a number from 1 to 826 and click the Search button.");
     let { pathname } = useLocation();
 
-
     React.useEffect(() => {
         switch (pathname) {
             case "/app/about":
