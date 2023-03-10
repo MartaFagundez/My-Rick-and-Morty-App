@@ -4,14 +4,12 @@ import styles from "./Detail.module.css";
 
 export default function Detail(props) {
 
-    const urlBase = "https://be-a-rym.up.railway.app/api";
-    const apiKey = "f1eb8e685b6b.6e353b80c36825beb221";
     const [character, setCharacter] = React.useState({});
     const { charId } = useParams();
     const navigate = useNavigate();
 
     React.useEffect(() => {
-        fetch(`${urlBase}/character/${charId}?key=${apiKey}`)
+        fetch(`http://localhost:3001/rickandmorty/detail/${charId}`)
         .then(res => res.json())
         .then((data) => {
             setCharacter(data);

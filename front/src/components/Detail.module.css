@@ -20,6 +20,10 @@
   justify-content: center;
   align-items: center;
 }
+.detail:hover {
+  transform: scale(1.009);
+  box-shadow: 0 0 15px 5px var(--violet-dark);
+}
 
 .detail h2 {
   font-family: "Londrina Solid", cursive;
@@ -50,6 +54,7 @@
   border-radius: 12px;
   border: 4px solid var(--violet-dark);
   margin: 2vw;
+  transition: 150ms;
 }
 
 .info {

@@ -7,10 +7,6 @@ import styles from "./Layout.module.css";
 
 export default function Layout(props) {
 
-    const urlBase = "https://be-a-rym.up.railway.app/api";
-    const apiKey = "f1eb8e685b6b.6e353b80c36825beb221";
-
-    // const urlBase = "http://localhost:3001/rickandmorty";
     const [characters, setCharacters] = React.useState([]);
     const [title, setTitle] = React.useState("Rick and Morty App");
     const [subtitle, setSubtitle] = React.useState("Create cards with a random character or enter a number from 1 to 826 and click the Search button.");
@@ -34,8 +30,7 @@ export default function Layout(props) {
     }, [pathname]);
 
     const onSearch = (characterId) => {
-        fetch(`${urlBase}/character/${characterId}?key=${apiKey}`)
-        // fetch(`${urlBase}/character/${characterId}`)
+        fetch(`http://localhost:3001/rickandmorty/onsearch/${characterId}`)
         .then((response) => response.json())
         .then((data) => {
             if (data.id) {

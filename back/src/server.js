@@ -1,31 +1,20 @@
 const http = require("http");
-const fs = require("fs");
-const data = require("./utils/data.js");
-
+const {getCharById} = require("./controllers/getCharById.js");
+const {getCharDetail} = require("./controllers/getCharDetail.js");
 
 const host = "localhost";
 const port = 3001;
 
 http.createServer((req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
-
-    if (req.url?.includes("rickandmorty/character")) {
-
-        let id = Number(req.url.split("/")[3]);
-        let character = data.characters.filter((char) => char.id === id);
-        
-        // Si se encuentra un personaje con el id
-        if (character.length) {
-            res.writeHead(200, {"Content-Type": "application/json"});
-            res.end(JSON.stringify(character[0]));
-        }
-        // Si no encuentra un personaje con el id
-        else {
-            res.writeHead(404, {"Content-Type": "text/plain"});
-            res.end("Character not found");
-        }
-
+    console.log(req.url);
+    if (req.url?.includes("onsearch")) {
+        let id = Number(req.url.split("/").pop());
+        getCharById(res, id);
     }
-    
+    if (req.url?.includes("detail")) {
+        let id = Number(req.url.split("/").pop());
+        getCharDetail(res, id);
+    }
     
 }).listen(port, host);
