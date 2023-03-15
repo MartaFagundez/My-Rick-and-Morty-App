@@ -3,7 +3,9 @@ const axios = require("axios");
 const urlBase = "https://be-a-rym.up.railway.app/api";
 const apiKey = "f1eb8e685b6b.6e353b80c36825beb221";
 
-const getCharDetail = (res, id) => {
+const getCharDetail = (req, res) => {
+    const {id} = req.params;
+
     axios.get(`${urlBase}/character/${id}?key=${apiKey}`)
         .then(response => response.data)
         .then(data => {
@@ -16,12 +18,10 @@ const getCharDetail = (res, id) => {
             origin: data.origin,
             location: data.location
            }
-           res.writeHead(200, {"Content-Type": "application/json"});
-           res.end(JSON.stringify(character)); 
+           res.status(200).json(character); 
         })
         .catch(error => {
-            res.writeHead(500, {"Content-Type": "text/plain"});
-            res.end(error.message);
+            res.status(500).json(error.message);
         });
 };
 
