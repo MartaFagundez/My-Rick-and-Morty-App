@@ -45,7 +45,7 @@ export default function Detail(props) {
             </div>
             
             <div className={loading ? styles.mask : styles.hidden}>
-                <div className={styles.spinner}></div>
+                {/* <div className={styles.spinner}></div> */}
             </div>
         </div>
         );

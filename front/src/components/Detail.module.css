@@ -102,6 +102,13 @@
     var(--violet-dark) 0%,
     var(--violet-light) 100%
   );
+  background-image: url("../imgs/bgDetail.gif");
+  background-color: var(--violet-medium);
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: local;
+  background-position: center;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -111,6 +118,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
+  transform: none;
 }
 
 .hidden {
