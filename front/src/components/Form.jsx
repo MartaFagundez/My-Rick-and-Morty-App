@@ -13,6 +13,8 @@ export default function Form (props) {
         username: "",
         password: ""
       });
+
+      const [isOpen, setIsOpen] = React.useState(false);
     
       const handleChange = evento => {
         setUserdata({...userData, [evento.target.name]: evento.target.value});
@@ -48,6 +50,16 @@ export default function Form (props) {
 
                     <button onSubmit={handleSubmit}>LOGIN</button>
                 </form>
+
+                <div className={styles.collapsible}>
+                  <button className={styles.toggle} onClick={() => setIsOpen(!isOpen) } >GUEST USER CREDENTIALS</button>
+                  { isOpen && 
+                    <div className={styles.guestInfo}>
+                      <p><span>Email: </span>maria@email.com</p>
+                      <p><span>Password: </span>123456</p>
+                    </div>
+                  }
+                </div>
         
             </div>
 

@@ -1,7 +1,8 @@
 const axios = require("axios");
 
-const urlBase = "https://be-a-rym.up.railway.app/api";
-const apiKey = "f1eb8e685b6b.6e353b80c36825beb221";
+require ("dotenv").config();
+const urlBase = process.env.API_URL;
+const apiKey = process.env.API_KEY;
 
 const getCharById = (req, res) => {
     const {id} = req.params;
